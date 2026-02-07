@@ -1,0 +1,25 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Scattered documents -->
+  <g opacity="0.9">
+    <!-- Document 1 -->
+    <rect x="20" y="40" width="60" height="80" rx="4" fill="#e53e3e" opacity="0.2" transform="rotate(-15 50 80)"/>
+    <rect x="20" y="40" width="60" height="80" rx="4" fill="none" stroke="#e53e3e" stroke-width="2" transform="rotate(-15 50 80)"/>
+    <line x1="30" y1="55" x2="55" y2="55" stroke="#e53e3e" stroke-width="2" transform="rotate(-15 50 80)"/>
+    <line x1="30" y1="65" x2="60" y2="65" stroke="#e53e3e" stroke-width="2" transform="rotate(-15 50 80)"/>
+    
+    <!-- Document 2 -->
+    <rect x="80" y="30" width="60" height="80" rx="4" fill="#e53e3e" opacity="0.2" transform="rotate(10 110 70)"/>
+    <rect x="80" y="30" width="60" height="80" rx="4" fill="none" stroke="#e53e3e" stroke-width="2" transform="rotate(10 110 70)"/>
+    <line x1="90" y1="45" x2="115" y2="45" stroke="#e53e3e" stroke-width="2" transform="rotate(10 110 70)"/>
+    <line x1="90" y1="55" x2="120" y2="55" stroke="#e53e3e" stroke-width="2" transform="rotate(10 110 70)"/>
+    
+    <!-- Document 3 -->
+    <rect x="50" y="100" width="60" height="80" rx="4" fill="#e53e3e" opacity="0.2" transform="rotate(5 80 140)"/>
+    <rect x="50" y="100" width="60" height="80" rx="4" fill="none" stroke="#e53e3e" stroke-width="2" transform="rotate(5 80 140)"/>
+    <line x1="60" y1="115" x2="85" y2="115" stroke="#e53e3e" stroke-width="2" transform="rotate(5 80 140)"/>
+    <line x1="60" y1="125" x2="90" y2="125" stroke="#e53e3e" stroke-width="2" transform="rotate(5 80 140)"/>
+  </g>
+  
+  <!-- Confusion marks -->
+  <text x="100" y="100" font-size="40" text-anchor="middle" opacity="0.6">❌</text>
+</svg>

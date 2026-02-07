@@ -66,6 +66,12 @@ html {
     font-size: 18px;
 }
 
+.logo-icon-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+}
+
 .logo-text {
     margin-left: 10px;
     font-size: 24px;
@@ -149,11 +155,46 @@ html {
     min-height: 600px;
     display: flex;
     align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('images/pattern-bg.svg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.3;
+    pointer-events: none;
 }
 
 .hero-content {
     max-width: 900px;
     margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-image {
+    margin-top: 50px;
+    animation: float 6s ease-in-out infinite;
+}
+
+.hero-image img {
+    max-width: 500px;
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(0 10px 30px rgba(0,0,0,0.2));
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
 }
 
 /* Badge */
@@ -173,12 +214,6 @@ html {
     background: #38a169;
     border-radius: 50%;
     margin-right: 10px;
-    animation: pulse 2s infinite;
-}
-
-@keyframes pulse {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.5; }
 }
 
 /* Hero Heading */
@@ -251,6 +286,20 @@ html {
     box-shadow: 0 8px 30px rgba(0,0,0,0.15);
 }
 
+.card-image {
+    margin-bottom: 20px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-image img {
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+}
+
 .card-icon {
     font-size: 48px;
     margin-bottom: 20px;
@@ -291,6 +340,20 @@ html {
 
 .highlight {
     color: #38a169;
+}
+
+/* Solution Image */
+.solution-image {
+    max-width: 500px;
+    margin: 40px auto 60px;
+    animation: float 8s ease-in-out infinite;
+}
+
+.solution-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.1);
 }
 
 /* Benefits List */
@@ -360,6 +423,55 @@ html {
     background: white;
 }
 
+.comparison-image {
+    max-width: 700px;
+    margin: 40px auto 60px;
+}
+
+.comparison-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+}
+
+.differences-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.difference-card {
+    background: #f7fafc;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.difference-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(56, 161, 105, 0.15);
+}
+
+.difference-icon {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.difference-card h3 {
+    font-size: 22px;
+    color: #1a365d;
+    margin-bottom: 15px;
+}
+
+.difference-card p {
+    color: #666;
+    line-height: 1.6;
+}
+
 /* ===================================
    FOOTER STYLES
    =================================== */
@@ -387,6 +499,18 @@ html {
 .footer-logo .logo-icon {
     background: white;
     color: #1a365d;
+}
+
+.footer-logo-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    margin-right: 10px;
+}
+
+.footer-logo .logo-text {
+    font-size: 24px;
+    font-weight: bold;
 }
 
 .footer-social {
@@ -426,6 +550,10 @@ html {
         font-size: 18px;
     }
     
+    .hero-image img {
+        max-width: 350px;
+    }
+    
     .section-header h2 {
         font-size: 32px;
     }
@@ -446,12 +574,24 @@ html {
         flex-direction: column;
         text-align: center;
     }
+    
+    .comparison-image {
+        max-width: 100%;
+    }
+    
+    .differences-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* Mobile */
 @media (max-width: 480px) {
     .hero h1 {
         font-size: 28px;
+    }
+    
+    .hero-image img {
+        max-width: 300px;
     }
     
     .cta-group {
@@ -468,5 +608,9 @@ html {
     
     .final-cta h3 {
         font-size: 28px;
+    }
+    
+    .solution-image {
+        max-width: 100%;
     }
 }
