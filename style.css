@@ -148,11 +148,14 @@ html {
    HERO SECTION
    =================================== */
 .hero {
-    background: linear-gradient(135deg, #1a365d 0%, #2d5a87 100%);
+    background-image: url('images/hero-bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     color: white;
-    padding: 100px 0;
+    padding: 80px 0;
     text-align: center;
-    min-height: 600px;
+    min-height: 500px;
     display: flex;
     align-items: center;
     position: relative;
@@ -166,10 +169,7 @@ html {
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url('images/pattern-bg.svg');
-    background-size: cover;
-    background-position: center;
-    opacity: 0.3;
+    background: linear-gradient(135deg, rgba(26, 54, 93, 0.3) 0%, rgba(45, 90, 135, 0.3) 100%);
     pointer-events: none;
 }
 
@@ -178,18 +178,6 @@ html {
     margin: 0 auto;
     position: relative;
     z-index: 1;
-}
-
-.hero-image {
-    margin-top: 50px;
-    animation: float 6s ease-in-out infinite;
-}
-
-.hero-image img {
-    max-width: 500px;
-    width: 100%;
-    height: auto;
-    filter: drop-shadow(0 10px 30px rgba(0,0,0,0.2));
 }
 
 @keyframes float {
@@ -288,16 +276,19 @@ html {
 
 .card-image {
     margin-bottom: 20px;
-    height: 150px;
+    height: 120px;
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
 }
 
 .card-image img {
-    width: 100%;
-    max-width: 150px;
+    max-width: 100px;
+    max-height: 100px;
+    width: auto;
     height: auto;
+    object-fit: contain;
 }
 
 .card-icon {
@@ -354,6 +345,32 @@ html {
     height: auto;
     border-radius: 20px;
     box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+}
+
+/* Two Column Layout: Image LEFT, Content RIGHT */
+.second-brain-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    margin: 60px 0;
+}
+
+.solution-image-left {
+    animation: float 8s ease-in-out infinite;
+}
+
+.solution-image-left img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+}
+
+.benefits-list-right {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
 }
 
 /* Benefits List */
@@ -473,20 +490,71 @@ html {
 }
 
 /* ===================================
+   EARLY ACCESS SECTION (CHALLENGE)
+   =================================== */
+.early-access-section {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #1a365d 0%, #2d5a87 100%);
+    color: white;
+    text-align: center;
+}
+
+.early-access-content {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.early-access-content h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.early-access-subtitle {
+    font-size: 20px;
+    margin-bottom: 30px;
+    color: rgba(255,255,255,0.9);
+}
+
+.early-access-message {
+    font-size: 16px;
+    margin-bottom: 30px;
+    color: rgba(255,255,255,0.8);
+    font-style: italic;
+}
+
+.btn-with-icon {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.btn-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.ending-message {
+    font-size: 14px;
+    color: rgba(255,255,255,0.7);
+    margin: 10px 0;
+}
+
+/* ===================================
    FOOTER STYLES
    =================================== */
 .footer {
     background: #1a365d;
     color: white;
-    padding: 60px 0;
+    padding: 60px 0 30px;
 }
 
-.footer-content {
+.footer-top {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
-    gap: 30px;
+    margin-bottom: 30px;
 }
 
 .footer-logo a {
@@ -515,21 +583,40 @@ html {
 
 .footer-social {
     display: flex;
-    gap: 30px;
+    gap: 20px;
 }
 
-.footer-social a {
+.social-icon {
     color: rgba(255,255,255,0.8);
-    text-decoration: none;
-    transition: color 0.3s;
+    transition: color 0.3s, transform 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.footer-social a:hover {
+.social-icon:hover {
     color: white;
+    transform: translateY(-3px);
+}
+
+.social-icon svg {
+    width: 24px;
+    height: 24px;
+}
+
+.footer-divider {
+    height: 1px;
+    background: rgba(255,255,255,0.2);
+    margin: 30px 0;
+}
+
+.footer-bottom {
+    text-align: center;
 }
 
 .footer-copyright {
     color: rgba(255,255,255,0.7);
+    font-size: 14px;
 }
 
 /* ===================================
@@ -542,16 +629,17 @@ html {
         display: none;
     }
     
+    .hero {
+        padding: 60px 0;
+        min-height: 400px;
+    }
+    
     .hero h1 {
         font-size: 36px;
     }
     
     .hero-subtitle {
         font-size: 18px;
-    }
-    
-    .hero-image img {
-        max-width: 350px;
     }
     
     .section-header h2 {
@@ -570,9 +658,10 @@ html {
         padding: 40px 20px;
     }
     
-    .footer-content {
+    .footer-top {
         flex-direction: column;
         text-align: center;
+        gap: 20px;
     }
     
     .comparison-image {
@@ -582,16 +671,26 @@ html {
     .differences-grid {
         grid-template-columns: 1fr;
     }
+    
+    .second-brain-layout {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .early-access-content h2 {
+        font-size: 32px;
+    }
 }
 
 /* Mobile */
 @media (max-width: 480px) {
-    .hero h1 {
-        font-size: 28px;
+    .hero {
+        padding: 50px 0;
+        min-height: 350px;
     }
     
-    .hero-image img {
-        max-width: 300px;
+    .hero h1 {
+        font-size: 28px;
     }
     
     .cta-group {
@@ -612,5 +711,13 @@ html {
     
     .solution-image {
         max-width: 100%;
+    }
+    
+    .early-access-content h2 {
+        font-size: 24px;
+    }
+    
+    .early-access-subtitle {
+        font-size: 16px;
     }
 }

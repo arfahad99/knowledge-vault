@@ -1,0 +1,11 @@
+<svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Scattered Notes Icon -->
+  <rect x="15" y="25" width="35" height="45" rx="4" fill="#E53E3E" opacity="0.2" stroke="#E53E3E" stroke-width="2"/>
+  <rect x="30" y="15" width="35" height="45" rx="4" fill="#E53E3E" opacity="0.3" stroke="#E53E3E" stroke-width="2"/>
+  <rect x="45" y="35" width="35" height="45" rx="4" fill="#E53E3E" opacity="0.4" stroke="#E53E3E" stroke-width="2"/>
+  
+  <!-- Lines on notes -->
+  <line x1="20" y1="35" x2="40" y2="35" stroke="#E53E3E" stroke-width="1.5"/>
+  <line x1="20" y1="42" x2="45" y2="42" stroke="#E53E3E" stroke-width="1.5"/>
+  <line x1="20" y1="49" x2="38" y2="49" stroke="#E53E3E" stroke-width="1.5"/>
+</svg>
